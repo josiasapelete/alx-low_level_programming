@@ -10,7 +10,7 @@
 
 int check_prime(int div, int num)
 {
-	if (num < 2 || num % div)
+	if (num < 2 || num % div == 0)
 		return (0);
 	else if (div > num / 2)
 		return (1);
