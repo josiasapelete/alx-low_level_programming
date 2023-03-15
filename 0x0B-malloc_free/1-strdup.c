@@ -1,36 +1,33 @@
 #include "main.h"
 
 /**
- * _strdup - Funtionthzt return a pointer to new alloc space
- * which contain a copy of the string given as aparam
- * @str: the string
- * Return: NULL if str = NULL, point to the copy else
+ * _strdup - funtion that return a pointer
+ * to a new string
+ * @str: The string that will be duplicated
+ * Return:  NULL if str = NULL or insufficient
+ *memory and pointer else
  */
 
 char *_strdup(char *str)
 {
 	char *ptr;
-	int i, j;
+	int i, length;
+
+	ptr = NULL;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
+	length = strlen(str);
 
-	for (j = 0; str(j); j++)
-		j++;
-
-	ptr = malloc(sizeof(char) * j);
+	ptr = malloc(sizeof(char) * length);
 
 	if (ptr == NULL)
 		return (NULL);
 
-
-	for (i = 0; i < j; i++)
+	for (i = 0; i < length; i++)
 	{
 		ptr[i] = str[i];
 	}
-
 	return (ptr);
 
 }
