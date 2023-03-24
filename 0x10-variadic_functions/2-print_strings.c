@@ -13,16 +13,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list ptr;
+	char *s;
 
 
 	va_start(ptr, n);
 
 	for (i = 0; i < n; i++)
 	{
-		if (va_arg(ptr, char*) == NULL)
-			printf("(nil)");
+		s = va_arg(ptr, char*);
+		if (s != NULL)
+			printf("%s",s);
 		else
-			printf("%s", va_arg(ptr, char*));
+			printf("(nil)");
 
 		if (i < (n - 1) && separator != NULL)
 			printf("%s", separator);
@@ -30,4 +32,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 	va_end(ptr);
+}
+
+int main(void)
+{
+    print_strings(", ", 2, "Jay", "Django");
+    return (0);
 }
