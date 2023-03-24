@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		s = va_arg(ptr, char*);
 		if (s != NULL)
-			printf("%s",s);
+			printf("%s", s);
 		else
 			printf("(nil)");
 
@@ -32,10 +32,4 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 	va_end(ptr);
-}
-
-int main(void)
-{
-    print_strings(", ", 2, "Jay", "Django");
-    return (0);
 }
