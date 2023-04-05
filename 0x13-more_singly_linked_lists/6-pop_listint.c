@@ -10,21 +10,20 @@
  * Return: the head node's data or 0 if the linked os empty
  */
 
+
 int pop_listint(listint_t **head)
 {
-	int i = (*head)->n;
-	listint_t *n = (*head)->next;
+	int i;
+	listint_t *n;
 
-	if (*head == NULL || head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
 
-	if ((*head)->next == NULL)
-	{
-		free(*head);
-		return (i);
-	}
+	i = (*head)->n;
+	n = (*head)->next;
 
 	free(*head);
 	*head = n;
+
 	return (i);
 }
