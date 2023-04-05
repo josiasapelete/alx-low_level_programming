@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "lists.h"
 
 /**
  * beforeMain - function that prints before the main execution
