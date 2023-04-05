@@ -12,20 +12,20 @@
 
 int pop_listint(listint_t **head)
 {
-	int i;
+	int i = (*head)->n;
+	listint_t *n = (*head)->next;
 
 	if (*head == NULL || head == NULL)
 		return (0);
 
 	if ((*head)->next == NULL)
 	{
-		i = (*head)->n;
 		free(*head);
-		*head = 0;
+		*head = n;
 		return (i);
 	}
-	i = (*head)->n;
+
 	free(*head);
-	*head = NULL;
+	*head = n;
 	return (i);
 }
