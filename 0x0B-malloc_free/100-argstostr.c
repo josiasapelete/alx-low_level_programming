@@ -48,7 +48,7 @@ char *argstostr(int ac, char **av)
 
 	}
 
-	arr[pos] = '\n';
+	/*arr[pos] = '\0';*/
 	return (arr);
 
 
