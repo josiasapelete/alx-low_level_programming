@@ -23,11 +23,13 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 	{
 		close(file);
-		return(1);
+		return (1);
 	}
-	for (len = 0; text_content[len];len++);
 
-	
+
+	for (len = 0; text_content[len];)
+		len++;
+
 	w = write(file, text_content, len);
 
 	if (w == -1 || file == -1)
