@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		len =  0;
 
-		while (text_content != NULL)
+		while (text_content[len])
 			len++;
 
 	}
