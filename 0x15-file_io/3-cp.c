@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.>
+#include <fcntl.h>
 #include "main.h"
 
 
@@ -14,8 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *file_from, *file_to;
-	int file1, file2, len1, len2;
+	int file1, file2;
 
 
 	if (argc != 2)
@@ -39,4 +38,6 @@ int main(int argc, char *argv[])
 		printf("Can't write to %s \n", argv[2]);
 		exit(99);
 	}
+
+	return (0);
 }
